@@ -17,7 +17,7 @@ Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.046 seconds
+- Completed reload, in  0.064 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
