@@ -1,7 +1,7 @@
 Initialize engine version: 4.3.2f1 (0517a5ae8669)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.3182]
+    Version:  Direct3D 9.0c [nvd3dumx.dll 9.18.13.3221]
     Renderer: NVIDIA GeForce GTX 560 Ti  
     Vendor:   NVIDIA
     VRAM:     977 MB (via DXGI)
@@ -17,7 +17,7 @@ Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.064 seconds
+- Completed reload, in  0.102 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.

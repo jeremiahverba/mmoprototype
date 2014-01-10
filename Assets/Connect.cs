@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Connect : MonoBehaviour
 {
-
+	public Transform Character;
 		private const string QUERY_PHASE = "queryphase";
-	private const string QUERYWAITING_PHASE = "querywaitingphase";
+		private const string QUERYWAITING_PHASE = "querywaitingphase";
 		private const string NEEDSERVER_PHASE = "needserverphase";
 		private const string SERVERSTARTING_PHASE = "serverstartingphase";
 		private const string SERVERRUNNING_PHASE = "serverrunningphase";
@@ -18,7 +18,7 @@ public class Connect : MonoBehaviour
 		private const string DISCONNECTED_PHASE = "disconnectedphase";
 		private string gameName = "com.crotchpunchstudios.mmoprototype";
 		private string bootPhase = QUERY_PHASE;
-		private string debugString;
+		private static string debugString;
 		private HostData[] hostList;
 
 		void Start ()
@@ -28,19 +28,34 @@ public class Connect : MonoBehaviour
 
 		void OnGUI ()
 		{
-				Rect r = new Rect (10, 10, 400, 1000);
-				Rect r2 = new Rect (r);
+		    if (Network.isServer || (Network.isClient && Input.GetKey (KeyCode.BackQuote))) {
+						Rect r = new Rect (10, 10, 400, 1000);
+						Rect r2 = new Rect (r);
 
-				r2.height = 1000;
+						r2.height = 1000;
 
-				Vector2 scrollViewVector = Vector2.zero;
-				scrollViewVector = GUI.BeginScrollView (r, scrollViewVector, r2);
-				
-				GUI.TextArea (r, debugString);
-						
-				GUI.EndScrollView ();
+						Vector2 scrollViewVector = Vector2.zero;
+						scrollViewVector = GUI.BeginScrollView (r, scrollViewVector, r2);
+			
+						GUI.TextArea (r, debugString);
+					
+						GUI.EndScrollView ();
+				}
+		if (bootPhase == CONNECTED_PHASE) {
+//			GUI.BeginGroup(new Rect((Screen.width - 500) / 2, (Screen.height - 500) / 2, 500, 500));
+//			GUILayout.Label("Enter your name:");
+//			string name = "";
+//			name = GUILayout.TextField(name, 15);
+//			if(GUILayout.Button("Spawn")){
+//				RequestPlayer(name);
+//			}
+//			GUI.EndGroup();
+				}
+
 		}
-	
+	public static void AddDebugLine(string line){
+		debugString += line + "\n";
+		}
 		// Update is called once per frame
 		void Update ()
 		{
@@ -49,14 +64,14 @@ public class Connect : MonoBehaviour
 						debugString += "Checking to see if a server exists already..." + "\n";
 						MasterServer.ClearHostList ();
 						MasterServer.RequestHostList (gameName);
-			bootPhase = QUERYWAITING_PHASE;
+						bootPhase = QUERYWAITING_PHASE;
 						break;
-		case QUERYWAITING_PHASE:
-			break;
+				case QUERYWAITING_PHASE:
+						break;
 				case NEEDSERVER_PHASE:
 						
-			bool useNat = !Network.HavePublicAddress();
-			debugString += "No server found. Attempting to start one with game name: " + gameName + " with nat setting: " + useNat + "\n";
+						bool useNat = !Network.HavePublicAddress ();
+						debugString += "No server found. Attempting to start one with game name: " + gameName + " with nat setting: " + useNat + "\n";
 						Network.InitializeServer (100, 2000, useNat);
 						bootPhase = SERVERSTARTING_PHASE;
 						break;
@@ -71,21 +86,21 @@ public class Connect : MonoBehaviour
 			
 				case JOIN_PHASE:
 						debugString += "Server found: " + hostList [0].gameName + ".  Attempting connection!\n";
-			debugString += "host info:\n";
-			debugString += hostList[0].gameName + "\n";
-			debugString += hostList[0].gameType + "\n";
-			debugString += hostList[0].guid.ToString() + "\n";
-			foreach(string s in hostList[0].ip){
-			debugString += s + ".";
-			}
-			debugString += "\n";
-			debugString += hostList[0].port + "\n";
-			debugString += hostList[0].playerLimit + "\n";
-			debugString += hostList[0].useNat + "\n";
-			debugString += hostList[0].passwordProtected + "\n";
-			debugString += hostList[0].comment + "\n";
-			debugString += hostList[0].connectedPlayers + "\n";
-			debugString += hostList[0].ToString() + "\n";
+						debugString += "host info:\n";
+						debugString += hostList [0].gameName + "\n";
+						debugString += hostList [0].gameType + "\n";
+						debugString += hostList [0].guid.ToString () + "\n";
+						foreach (string s in hostList[0].ip) {
+								debugString += s + ".";
+						}
+						debugString += "\n";
+						debugString += hostList [0].port + "\n";
+						debugString += hostList [0].playerLimit + "\n";
+						debugString += hostList [0].useNat + "\n";
+						debugString += hostList [0].passwordProtected + "\n";
+						debugString += hostList [0].comment + "\n";
+						debugString += hostList [0].connectedPlayers + "\n";
+						debugString += hostList [0].ToString () + "\n";
 
 						Network.Connect (hostList [0]);
 						bootPhase = CONNECTING_PHASE;
@@ -100,7 +115,6 @@ public class Connect : MonoBehaviour
 						break;
 			
 				case CONNECTED_PHASE:
-						debugString += "We're Connected!\n";
 						break;
 			
 				default:
@@ -136,12 +150,14 @@ public class Connect : MonoBehaviour
 
 		void OnConnectedToServer ()
 		{
+				debugString += "We're Connected!\n";
 				bootPhase = CONNECTED_PHASE;
 		}
 
 		void OnPlayerConnected (NetworkPlayer p)
 		{
 				debugString += "A Player Connected: " + p.ipAddress + "\n";
+		Network.Instantiate (Character, Vector3.zero, Quaternion.identity, 0);
 		}
 
 		void OnFailedToConnect (NetworkConnectionError e)
