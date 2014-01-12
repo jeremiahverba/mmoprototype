@@ -94,55 +94,59 @@ public class PlayerControl : MonoBehaviour
             float angle = Mathf.Atan2(dif.x, dif.y) * Mathf.Rad2Deg;
             networkView.RPC("SetAngle", RPCMode.Server, angle);
         }
-    }
+//    }
     // Update is called once per frame
-    void FixedUpdate()
-    {
+//    void Update()
+//    {
         if (Network.isServer)
         {
             if(MouseButtonOneDown)
             {
                 gameObject.SendMessage("DoAttack", MouseButtonOneTargetPos);
             }
-            float newXVel = 0f;
-            float newYVel = 0f;
+            float newX = 0f;
+            float newY = 0f;
             if (WestButtonDown)
             {
-                newXVel += -MaxSpeed;
+                newX = -MaxSpeed;
             } 
             if (EastButtonDown)
             {
-                newXVel += MaxSpeed;
+                newX = MaxSpeed;
 
             }
             if (NorthButtonDown)
             {
-                newYVel += MaxSpeed;
+                newY = MaxSpeed;
             } 
             if (SouthButtonDown)
             {
-                newYVel += -MaxSpeed;
+                newY = -MaxSpeed;
             }
-            rigidbody2D.velocity = new Vector2(newXVel, newYVel);
+//            Vector3 dir = new Vector3(newXVel, newYVel, 0);
+            Vector3 newPos = new Vector3(transform.position.x + newX, transform.position.y + newY, transform.position.z);
+
+            transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime);
+//            transform.Translate(MaxSpeed * dir * Time.deltaTime);
         }
     }
     
     void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
     {
 //      Connect.AddDebugLine ("got OnSerializeNetworkView call. Stream is writing: " + stream.isWriting);
-        Vector3 syncVelocity = Vector3.zero;
+//        Vector3 syncVelocity = Vector3.zero;
         Vector3 syncAngle = Vector3.zero;
         if (stream.isWriting)
         {
-            syncVelocity = new Vector3(rigidbody2D.velocity.x, rigidbody2D.velocity.y, 0);
-            stream.Serialize(ref syncVelocity);
+//            syncVelocity = new Vector3(rigidbody2D.velocity.x, rigidbody2D.velocity.y, 0);
+//            stream.Serialize(ref syncVelocity);
             syncAngle = transform.eulerAngles;
             stream.Serialize(ref syncAngle);
 
         } else
         {
-            stream.Serialize(ref syncVelocity);
-            rigidbody2D.velocity = new Vector2(syncVelocity.x, syncVelocity.y);
+//            stream.Serialize(ref syncVelocity);
+//            rigidbody2D.velocity = new Vector2(syncVelocity.x, syncVelocity.y);
             stream.Serialize(ref syncAngle);
             transform.eulerAngles = syncAngle;
         }

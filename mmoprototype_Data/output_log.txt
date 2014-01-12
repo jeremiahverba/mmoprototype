@@ -17,30 +17,7 @@ Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.106 seconds
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
-<RI> Initializing input.
-<RI> Input initialized.
-Initialize engine version: 4.3.2f1 (0517a5ae8669)
-GfxDevice: creating device client; threaded=1
-Direct3D:
-    Version:  Direct3D 9.0c [nvd3dumx.dll 9.18.13.3221]
-    Renderer: NVIDIA GeForce GTX 560 Ti  
-    Vendor:   NVIDIA
-    VRAM:     977 MB (via DXGI)
-    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
-Begin MonoManager ReloadAssembly
-Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
-Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.054 seconds
+- Completed reload, in  0.063 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -66,37 +43,15 @@ Set player ID to 1
  
 (Filename:  Line: 2479)
 
-Connected to master server at 67.225.180.24:23466
- 
-(Filename:  Line: 2479)
-
-Incoming host list query response from master server.
- 
-(Filename:  Line: 2479)
-
-Running as client. No player ID set yet.
- 
-(Filename:  Line: 2479)
-
-Connected to 192.168.1.127:2000
-
- 
-(Filename:  Line: 2479)
-
-Set player ID to 2
-
- 
-(Filename:  Line: 2479)
-
-Destroying object with view ID 'AllocatedID: 3'
+Destroying object with view ID 'AllocatedID: 2'
  
 (Filename:  Line: 1374)
 
-View ID AllocatedID: 3 not found during lookup. Strange behaviour may occur
+View ID AllocatedID: 2 not found during lookup. Strange behaviour may occur
  
 (Filename:  Line: 1676)
 
-Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 3' could not be located.
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 2' could not be located.
  
 (Filename:  Line: 2458)
 
@@ -112,19 +67,27 @@ Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 3
  
 (Filename:  Line: 2458)
 
-View ID AllocatedID: 3 not found during lookup. Strange behaviour may occur
+Destroying object with view ID 'AllocatedID: 4'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 4 not found during lookup. Strange behaviour may occur
  
 (Filename:  Line: 1676)
 
-Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 3' could not be located.
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 4' could not be located.
  
 (Filename:  Line: 2458)
 
-View ID AllocatedID: 3 not found during lookup. Strange behaviour may occur
+Destroying object with view ID 'AllocatedID: 6'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 6 not found during lookup. Strange behaviour may occur
  
 (Filename:  Line: 1676)
 
-Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 3' could not be located.
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 6' could not be located.
  
 (Filename:  Line: 2458)
 
@@ -140,31 +103,1203 @@ Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 7
  
 (Filename:  Line: 2458)
 
-Destroying object with view ID 'AllocatedID: 7'
+Destroying object with view ID 'AllocatedID: 8'
  
 (Filename:  Line: 1374)
 
-View ID AllocatedID: 7 not found during lookup. Strange behaviour may occur
+View ID AllocatedID: 8 not found during lookup. Strange behaviour may occur
  
 (Filename:  Line: 1676)
 
-Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 7' could not be located.
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 8' could not be located.
  
 (Filename:  Line: 2458)
 
-View ID AllocatedID: 7 not found during lookup. Strange behaviour may occur
+Destroying object with view ID 'AllocatedID: 9'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 9 not found during lookup. Strange behaviour may occur
  
 (Filename:  Line: 1676)
 
-Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 7' could not be located.
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 9' could not be located.
  
 (Filename:  Line: 2458)
 
-View ID AllocatedID: 7 not found during lookup. Strange behaviour may occur
+Destroying object with view ID 'AllocatedID: 13'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 13 not found during lookup. Strange behaviour may occur
  
 (Filename:  Line: 1676)
 
-Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 7' could not be located.
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 13' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 16'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 16 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 16' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 17'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 17 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 17' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 18'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 18 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 18' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 20'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 20 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 20' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 21'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 21 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 21' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 22'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 22 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 22' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 23'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 23 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 23' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 24'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 24 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 24' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 25'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 25 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 25' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 26'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 26 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 26' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 27'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 27 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 27' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 29'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 29 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 29' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 30'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 30 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 30' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 31'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 31 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 31' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 32'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 32 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 32' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 33'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 33 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 33' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 34'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 34 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 34' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 36'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 36 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 36' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 38'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 38 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 38' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 39'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 39 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 39' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 40'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 40 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 40' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 41'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 41 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 41' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 42'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 42 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 42' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 44'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 44 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 44' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 45'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 45 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 45' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 46'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 46 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 46' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 47'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 47 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 47' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 48'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 48 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 48' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 150'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 150 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 150' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 151'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 151 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 151' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 153'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 153 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 153' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 154'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 154 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 154' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 155'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 155 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 155' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 156'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 156 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 156' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 157'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 157 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 157' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 159'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 159 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 159' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 160'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 160 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 160' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 161'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 161 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 161' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 162'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 162 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 162' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 163'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 163 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 163' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 164'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 164 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 164' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 165'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 165 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 165' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 168'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 168 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 168' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 170'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 170 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 170' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 173'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 173 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 173' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 175'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 175 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 175' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 176'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 176 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 176' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 177'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 177 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 177' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 178'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 178 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 178' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 180'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 180 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 180' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 185'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 185 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 185' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 186'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 186 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 186' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 188'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 188 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 188' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 189'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 189 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 189' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 190'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 190 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 190' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 191'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 191 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 191' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 192'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 192 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 192' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 193'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 193 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 193' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 194'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 194 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 194' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 198'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 198 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 198' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 199'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 199 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 199' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 200'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 200 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 200' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 201'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 201 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 201' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 202'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 202 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 202' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 204'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 204 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 204' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 205'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 205 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 205' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 206'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 206 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 206' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 207'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 207 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 207' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 208'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 208 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 208' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 209'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 209 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 209' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 210'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 210 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 210' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 211'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 211 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 211' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 212'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 212 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 212' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 214'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 214 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 214' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 216'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 216 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 216' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 217'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 217 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 217' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 218'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 218 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 218' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 220'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 220 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 220' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 221'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 221 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 221' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 222'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 222 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 222' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 223'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 223 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 223' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 224'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 224 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 224' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 225'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 225 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 225' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 226'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 226 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 226' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 227'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 227 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 227' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 228'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 228 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 228' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 229'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 229 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 229' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 230'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 230 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 230' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 233'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 233 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 233' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 235'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 235 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 235' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 236'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 236 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 236' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 237'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 237 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 237' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 238'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 238 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 238' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 239'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 239 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 239' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 240'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 240 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 240' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 241'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 241 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 241' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 242'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 242 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 242' could not be located.
  
 (Filename:  Line: 2458)
 

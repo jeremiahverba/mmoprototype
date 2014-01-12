@@ -104,13 +104,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400012}
-  - 50: {fileID: 5000000}
   - 95: {fileID: 9500000}
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
   - 148: {fileID: 14800000}
   - 114: {fileID: 11400002}
   - 132: {fileID: 13200000}
+  - 50: {fileID: 5000000}
   m_Layer: 19
   m_Name: Character
   m_TagString: Players
@@ -213,7 +213,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
 --- !u!61 &6100000
@@ -297,7 +297,7 @@ NetworkView:
   m_GameObject: {fileID: 100012}
   m_Enabled: 1
   m_StateSynchronization: 1
-  m_Observed: {fileID: 11400000}
+  m_Observed: {fileID: 400012}
   m_ViewID:
     m_ID: 0
     m_Type: 0
