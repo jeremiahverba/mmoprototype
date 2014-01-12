@@ -21,7 +21,7 @@ public class SwordController : MonoBehaviour {
 //        Connect.AddDebugLine("sword update: " + dif + ">?" + AttackDuration);
         if (dif > AttackDuration)
         {
-            Destroy(gameObject);
+            Network.Destroy(gameObject);
         }
 	}
 
@@ -32,8 +32,13 @@ public class SwordController : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D other)
     {       
+//        Connect.AddDebugLine("Sword detecting collision!");
+//        Connect.AddDebugLine("other: " + other.gameObject);
+//        Connect.AddDebugLine("owner: " + Owner);
+//        Connect.AddDebugLine("owner is other? " + (Owner == other.gameObject));
         if (other.gameObject.tag == "Players"  && other.gameObject != Owner)
         {
+//            Connect.AddDebugLine("Sword dealing damage to target.");
             other.gameObject.SendMessage("TakeDamage", AttackDamageValue);
             Vector2 force = new Vector2(transform.position.x - other.transform.position.x, transform.position.y - other.transform.position.y);
             other.rigidbody2D.AddForce(force);

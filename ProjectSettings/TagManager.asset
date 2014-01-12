@@ -5,6 +5,7 @@ TagManager:
   tags:
   - Players
   - Swords
+  - Client
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -46,4 +47,16 @@ TagManager:
   - name: Player
     userID: 1
     uniqueID: 1068657543
+    locked: 0
+  - name: Attacks
+    userID: 2
+    uniqueID: 416846219
+    locked: 0
+  - name: Objects
+    userID: 3
+    uniqueID: 2623264531
+    locked: 0
+  - name: Terrain
+    userID: 4
+    uniqueID: 338059241
     locked: 0

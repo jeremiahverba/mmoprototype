@@ -19,14 +19,32 @@ public class PlayerCombat : MonoBehaviour {
         {           
             if (Health <= 0)
             {
-                Destroy(gameObject);
+                Connect.AddDebugLine("Player has died.");
+                GameObject client = GameObject.FindWithTag("Client");
+                client.SendMessage("RespawnPlayer", transform);
+                Network.Destroy(gameObject);
             }
         }
+        GUIText healthDisplay = GetComponent("GUIText") as GUIText;
+        healthDisplay.text = Health.ToString();
 	}
-
+    void OnSerializeNetworkView(BitStream b, NetworkMessageInfo i)
+    {
+        float health = 0f;
+        if (b.isWriting)
+        {
+            health = Health;
+            b.Serialize(ref health);
+        } else
+        {
+            b.Serialize(ref health);
+            Health = health;
+        }
+    }
     void TakeDamage(float damage)
     {
-        Health += damage;
+        Connect.AddDebugLine("Player Taking Damage: " + damage);
+        Health -= damage;
     }
 
     void DoAttack(Vector3 targetPos)

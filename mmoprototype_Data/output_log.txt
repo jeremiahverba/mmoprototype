@@ -17,7 +17,30 @@ Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.063 seconds
+- Completed reload, in  0.106 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Initialize engine version: 4.3.2f1 (0517a5ae8669)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dumx.dll 9.18.13.3221]
+    Renderer: NVIDIA GeForce GTX 560 Ti  
+    Vendor:   NVIDIA
+    VRAM:     977 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.054 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -42,4 +65,106 @@ Set player ID to 1
 
  
 (Filename:  Line: 2479)
+
+Connected to master server at 67.225.180.24:23466
+ 
+(Filename:  Line: 2479)
+
+Incoming host list query response from master server.
+ 
+(Filename:  Line: 2479)
+
+Running as client. No player ID set yet.
+ 
+(Filename:  Line: 2479)
+
+Connected to 192.168.1.127:2000
+
+ 
+(Filename:  Line: 2479)
+
+Set player ID to 2
+
+ 
+(Filename:  Line: 2479)
+
+Destroying object with view ID 'AllocatedID: 3'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 3 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 3' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 3'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 3 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 3' could not be located.
+ 
+(Filename:  Line: 2458)
+
+View ID AllocatedID: 3 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 3' could not be located.
+ 
+(Filename:  Line: 2458)
+
+View ID AllocatedID: 3 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 3' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 7'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 7 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 7' could not be located.
+ 
+(Filename:  Line: 2458)
+
+Destroying object with view ID 'AllocatedID: 7'
+ 
+(Filename:  Line: 1374)
+
+View ID AllocatedID: 7 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 7' could not be located.
+ 
+(Filename:  Line: 2458)
+
+View ID AllocatedID: 7 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 7' could not be located.
+ 
+(Filename:  Line: 2458)
+
+View ID AllocatedID: 7 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Couldn't perform remote Network.Destroy because the network view 'AllocatedID: 7' could not be located.
+ 
+(Filename:  Line: 2458)
 

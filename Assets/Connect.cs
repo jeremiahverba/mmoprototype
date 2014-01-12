@@ -21,11 +21,14 @@ public class Connect : MonoBehaviour
     private string bootPhase = QUERY_PHASE;
     private static string debugString;
     private HostData[] hostList;
-    private Dictionary<NetworkPlayer, Transform> clientPlayers;
+    // We want both of these so we can quickly look up from either direction
+    private static Dictionary<NetworkPlayer, Transform> clientPlayers;
+    private static Dictionary<Transform, NetworkPlayer> playerClients; 
     private Vector2 ScrollPos;
     void Start()
     {
         clientPlayers = new Dictionary<NetworkPlayer, Transform>();
+        playerClients = new Dictionary<Transform, NetworkPlayer>();
     }
 
     void OnGUI()
@@ -175,8 +178,26 @@ public class Connect : MonoBehaviour
         NetworkView client = newCharacter.networkView;
         client.RPC("SetCharacter", RPCMode.AllBuffered, p);
         clientPlayers.Add(p, newCharacter);
+        playerClients.Add(newCharacter, p);
     }
+    void RespawnPlayer(Transform c)
+    {
+        AddDebugLine("Respawning character.");
+        NetworkPlayer p = playerClients[c];   
+        playerClients.Remove(c);
+        clientPlayers.Remove(p);
 
+        Transform spawnPoint;
+        GameObject[] spawns = GameObject.FindGameObjectsWithTag("Respawn");
+        int index = Random.Range(0, spawns.Length);
+        spawnPoint = spawns [index].transform;
+        Transform newCharacter = (Transform)Network.Instantiate(Character, spawnPoint.position, spawnPoint.rotation, 0);
+        NetworkView client = newCharacter.networkView;
+        client.RPC("SetCharacter", RPCMode.AllBuffered, p);
+
+        clientPlayers.Add(p, newCharacter);
+        playerClients.Add(newCharacter, p);
+    }
     void OnFailedToConnect(NetworkConnectionError e)
     {
         debugString += "Failed To Connect: " + e + "\n";
@@ -187,8 +208,12 @@ public class Connect : MonoBehaviour
         debugString += "A Player Disconnected: " + p.ipAddress + "\n";
 
         Transform characterToDestroy = clientPlayers[p];
-        Destroy(characterToDestroy.gameObject);
+
         clientPlayers.Remove(p);
+        playerClients.Remove(characterToDestroy);
+
+        Destroy(characterToDestroy.gameObject);
+
 
         Network.RemoveRPCs(p);
         Network.DestroyPlayerObjects(p);
