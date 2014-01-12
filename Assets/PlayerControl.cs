@@ -3,151 +3,240 @@ using System.Collections;
 
 public class PlayerControl : MonoBehaviour
 {
-		private float MaxSpeed = 5.0f;
-		private bool MouseButtonOneDown = false;
-		private bool MouseButtonTwoDown = false;
-		private bool WestButtonDown = false;
-		private bool EastButtonDown = false;
-		private bool NorthButtonDown = false;
-		private bool SouthButtonDown = false;
-		private Vector3 MousePos = Vector2.zero;
+    private NetworkPlayer theOwner;
+    private float MaxSpeed = 5.0f;
+    private bool MouseButtonOneDown = false;
+    private Vector3 MouseButtonOneTargetPos;
+    private bool MouseButtonTwoDown = false;
+    private Vector3 MOuseButtonTwoTargetPos;
+    private Vector3 MousePos = Vector2.zero;
+    private bool WestButtonDown = false;
+    private bool EastButtonDown = false;
+    private bool NorthButtonDown = false;
+    private bool SouthButtonDown = false;
+    private bool ActionButton1Down = false;
+    private bool ActionButton2Down = false;
+    private bool ActionButton3Down = false;
+    private bool ActionButton4Down = false;
+    private bool ActionButton5Down = false;
 
-		// Use this for initialization
-		void Start ()
-		{
-	
-		}
 
-		void Update ()
-		{
-				if (Network.isClient) {
-						if (Input.GetMouseButtonDown (0)) {
-								networkView.RPC ("MouseButtonOne", RPCMode.Server, true);
-						}
-						if (Input.GetMouseButtonUp (0)) {
-								networkView.RPC ("MouseButtonOne", RPCMode.Server, false);
-						}
-						if (Input.GetKeyDown (KeyCode.A)) {
-								networkView.RPC ("WestButton", RPCMode.Server, true);
-						}
-						if (Input.GetKeyUp (KeyCode.A)) {
-								networkView.RPC ("WestButton", RPCMode.Server, false);
-						}
-						if (Input.GetKeyDown (KeyCode.D)) {
-								networkView.RPC ("EastButton", RPCMode.Server, true);
-						}
-						if (Input.GetKeyUp (KeyCode.D)) {
-								networkView.RPC ("EastButton", RPCMode.Server, false);
-						}
-						if (Input.GetKeyDown (KeyCode.S)) {
-								networkView.RPC ("SouthButton", RPCMode.Server, true);
-						}
-						if (Input.GetKeyUp (KeyCode.S)) {
-								networkView.RPC ("SouthButton", RPCMode.Server, false);
-						}
-						if (Input.GetKeyDown (KeyCode.W)) {
-								networkView.RPC ("NorthButton", RPCMode.Server, true);
-						}
-						if (Input.GetKeyUp (KeyCode.W)) {
-								networkView.RPC ("NorthButton", RPCMode.Server, false);
-						}
-						Vector3 tempVec = Input.mousePosition;
-						Vector3 dif = tempVec - Camera.main.WorldToScreenPoint (transform.position);
-						float angle = Mathf.Atan2 (dif.x, dif.y) * Mathf.Rad2Deg;
-						Connect.AddDebugLine ("sending our facing angle to server.");
-						networkView.RPC ("SetAngle", RPCMode.Server, angle);
-				}
-		}
-		// Update is called once per frame
-		void FixedUpdate ()
-		{
-				if (Network.isServer) {
-						float newXVel = 0f;
-						float newYVel = 0f;
-						if (WestButtonDown) {
-								newXVel += -MaxSpeed;
-						} 
-						if (EastButtonDown) {
-								newXVel += MaxSpeed;
+    // Use this for initialization
+    void Start()
+    {
+        if (Network.isClient)
+        {
+            enabled = false;
+        }
+    }
 
-						}
-						if (NorthButtonDown) {
-								newYVel += MaxSpeed;
-						} 
-						if (SouthButtonDown) {
-								newYVel += -MaxSpeed;
-						}
-						rigidbody2D.velocity = new Vector2 (newXVel, newYVel);
-//		Vector2 mouse2 = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
-//			Vector3 tempVec = MousePos;//Input.mousePosition;
-//		tempVec.z = tempVec.y;
-//		tempVec.y = 0;
-//						Vector3 dif = tempVec - Camera.main.WorldToScreenPoint (transform.position);
-//						float angle = Mathf.Atan2 (dif.x, dif.y) * Mathf.Rad2Deg;
-//		Quaternion q = new Quaternion(0, 0, 1, angle);
-//						transform.eulerAngles = new Vector3 (0, 0, -angle);
+    void Update()
+    {
+        if (theOwner != null && Network.player == theOwner && Network.isClient)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                networkView.RPC("MouseButtonOne", RPCMode.Server, true, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                networkView.RPC("MouseButtonOne", RPCMode.Server, false, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                    networkView.RPC("MouseButtonTwo", RPCMode.Server, true, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            }
+            if (Input.GetMouseButtonUp(1))
+            {
+                        networkView.RPC("MouseButtonTwo", RPCMode.Server, false, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                networkView.RPC("WestButton", RPCMode.Server, true);
+            }
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                networkView.RPC("WestButton", RPCMode.Server, false);
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                networkView.RPC("EastButton", RPCMode.Server, true);
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                networkView.RPC("EastButton", RPCMode.Server, false);
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                networkView.RPC("SouthButton", RPCMode.Server, true);
+            }
+            if (Input.GetKeyUp(KeyCode.S))
+            {
+                networkView.RPC("SouthButton", RPCMode.Server, false);
+            }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                networkView.RPC("NorthButton", RPCMode.Server, true);
+            }
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                networkView.RPC("NorthButton", RPCMode.Server, false);
+            }
 
-				}
-		}
-	
-		void OnSerializeNetworkView (BitStream stream, NetworkMessageInfo info)
-		{
-//		Connect.AddDebugLine ("got OnSerializeNetworkView call. Stream is writing: " + stream.isWriting);
-				Vector3 syncVelocity = Vector3.zero;
-				Vector3 syncAngle = Vector3.zero;
-				if (stream.isWriting) {
-						syncVelocity = new Vector3 (rigidbody2D.velocity.x, rigidbody2D.velocity.y, 0);
-						stream.Serialize (ref syncVelocity);
-						syncAngle = transform.eulerAngles;
-						stream.Serialize (ref syncAngle);
+            networkView.RPC("ActionButton1", RPCMode.Server, Input.GetKeyDown(KeyCode.Alpha1));
+            networkView.RPC("ActionButton2", RPCMode.Server, Input.GetKeyDown(KeyCode.Alpha2));
+            networkView.RPC("ActionButton3", RPCMode.Server, Input.GetKeyDown(KeyCode.Alpha3));
+            networkView.RPC("ActionButton4", RPCMode.Server, Input.GetKeyDown(KeyCode.Alpha4));
+            networkView.RPC("ActionButton5", RPCMode.Server, Input.GetKeyDown(KeyCode.Alpha5));
 
-				} else {
-						stream.Serialize (ref syncVelocity);
-						rigidbody2D.velocity = new Vector2 (syncVelocity.x, syncVelocity.y);
-						stream.Serialize (ref syncAngle);
-						transform.eulerAngles = syncAngle;
-				}
-		}
+            Vector3 tempVec = Input.mousePosition;
+            Vector3 dif = tempVec - Camera.main.WorldToScreenPoint(transform.position);
+            float angle = Mathf.Atan2(dif.x, dif.y) * Mathf.Rad2Deg;
+            networkView.RPC("SetAngle", RPCMode.Server, angle);
+        }
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (Network.isServer)
+        {
+            if(MouseButtonOneDown)
+            {
+                gameObject.SendMessage("DoAttack", MouseButtonOneTargetPos);
+            }
+            float newXVel = 0f;
+            float newYVel = 0f;
+            if (WestButtonDown)
+            {
+                newXVel += -MaxSpeed;
+            } 
+            if (EastButtonDown)
+            {
+                newXVel += MaxSpeed;
 
-		[RPC]
-		void MouseButtonOne (bool down)
-		{
-//				Connect.AddDebugLine ("server got mouse button one down: " + down);
-				MouseButtonOneDown = down;
-		}
+            }
+            if (NorthButtonDown)
+            {
+                newYVel += MaxSpeed;
+            } 
+            if (SouthButtonDown)
+            {
+                newYVel += -MaxSpeed;
+            }
+            rigidbody2D.velocity = new Vector2(newXVel, newYVel);
+        }
+    }
+    
+    void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+    {
+//      Connect.AddDebugLine ("got OnSerializeNetworkView call. Stream is writing: " + stream.isWriting);
+        Vector3 syncVelocity = Vector3.zero;
+        Vector3 syncAngle = Vector3.zero;
+        if (stream.isWriting)
+        {
+            syncVelocity = new Vector3(rigidbody2D.velocity.x, rigidbody2D.velocity.y, 0);
+            stream.Serialize(ref syncVelocity);
+            syncAngle = transform.eulerAngles;
+            stream.Serialize(ref syncAngle);
 
-		[RPC]
-		void WestButton (bool down)
-		{
-//				Connect.AddDebugLine ("server got west button down: " + down);
-				WestButtonDown = down;
-		}
+        } else
+        {
+            stream.Serialize(ref syncVelocity);
+            rigidbody2D.velocity = new Vector2(syncVelocity.x, syncVelocity.y);
+            stream.Serialize(ref syncAngle);
+            transform.eulerAngles = syncAngle;
+        }
+    }
 
-		[RPC]
-		void EastButton (bool down)
-		{
-//				Connect.AddDebugLine ("server got east button down: " + down);
-				EastButtonDown = down;
-		}
+    [RPC]
+    void SetCharacter(NetworkPlayer p)
+    {
+        theOwner = p;
+        if (p == Network.player)
+        {
+            enabled = true;
+            Camera.main.SendMessage("SetTarget", transform);
+        }
+    }
 
-		[RPC]
-		void NorthButton (bool down)
-		{
-//				Connect.AddDebugLine ("server got north button down: " + down);
-				NorthButtonDown = down;
-		}
+    [RPC]
+    void SetAngle(float angle)
+    {
+        //              Connect.AddDebugLine ("server got new angle: " + angle);
+        transform.eulerAngles = new Vector3(0, 0, -angle);
+    }
 
-		[RPC]
-		void SouthButton (bool down)
-		{
-//				Connect.AddDebugLine ("server got south button down: " + down);
-				SouthButtonDown = down;
-		}
+    [RPC]
+    void MouseButtonOne(bool down, Vector3 targetPos)
+    {
+//              Connect.AddDebugLine ("server got mouse button one down: " + down);
+        MouseButtonOneDown = down;
+        MouseButtonOneTargetPos = targetPos;
+    }
 
-		[RPC]
-	void SetAngle (float angle)
-		{
-		Connect.AddDebugLine ("server got new angle: " + angle);
-				transform.eulerAngles = new Vector3 (0, 0, -angle);
-		}
+    [RPC]
+    void MouseButtonTwo(bool down, Vector3 targetPos)
+    {
+        //              Connect.AddDebugLine ("server got mouse button two down: " + down);
+        MouseButtonTwoDown = down;
+        MOuseButtonTwoTargetPos = targetPos;
+    }
+    
+    [RPC]
+    void WestButton(bool down)
+    {
+//              Connect.AddDebugLine ("server got west button down: " + down);
+        WestButtonDown = down;
+    }
+
+    [RPC]
+    void EastButton(bool down)
+    {
+//              Connect.AddDebugLine ("server got east button down: " + down);
+        EastButtonDown = down;
+    }
+
+    [RPC]
+    void NorthButton(bool down)
+    {
+//              Connect.AddDebugLine ("server got north button down: " + down);
+        NorthButtonDown = down;
+    }
+
+    [RPC]
+    void SouthButton(bool down)
+    {
+//              Connect.AddDebugLine ("server got south button down: " + down);
+        SouthButtonDown = down;
+    }
+    [RPC]
+    void ActionButton1(bool down)
+    {
+//                      Connect.AddDebugLine ("server got action button 1 down: " + down);
+        ActionButton1Down = down;
+    }
+    [RPC]
+    void ActionButton2(bool down)
+    {
+//                      Connect.AddDebugLine ("server got action button 2 down: " + down);
+        ActionButton2Down = down;
+    }
+    [RPC]
+    void ActionButton3(bool down)
+    {
+//                      Connect.AddDebugLine ("server got action button 3 down: " + down);
+        ActionButton3Down = down;
+    }
+    [RPC]
+    void ActionButton4(bool down)
+    {
+//                      Connect.AddDebugLine ("server got action button 4 down: " + down);
+        ActionButton4Down = down;
+    }
+    [RPC]
+    void ActionButton5(bool down)
+    {
+//                      Connect.AddDebugLine ("server got action button 5 down: " + down);
+        ActionButton5Down = down;
+    }
 }

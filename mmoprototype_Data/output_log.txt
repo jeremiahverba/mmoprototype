@@ -17,7 +17,29 @@ Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading F:\dev\Unity\mmoprototype\mmoprototype_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.046 seconds
+- Completed reload, in  0.063 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+Connected to master server at 67.225.180.24:23466
+ 
+(Filename:  Line: 2479)
+
+Incoming host list query response from master server.
+ 
+(Filename:  Line: 2479)
+
+Running as client. No player ID set yet.
+ 
+(Filename:  Line: 2479)
+
+Connected to 192.168.1.127:2000
+
+ 
+(Filename:  Line: 2479)
+
+Set player ID to 1
+
+ 
+(Filename:  Line: 2479)
+
